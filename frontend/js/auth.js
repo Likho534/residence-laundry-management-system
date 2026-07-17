@@ -17,10 +17,20 @@ async function handleLogin(event) {
 
     if (error){
         console.error(error.message);
+        console.log("Ishubile ta yam");
 
     } else {
         console.log("Login Succesful Bhuda!");
         console.log(data.user);
+        const {data: profile, error: profileError } = 
+        await window.supabaseClient
+             .from("profiles")
+             .select("*")
+             .eq("id",data.user.id)
+             .single()
+
+        window.location.href = "pages/student-dashboard.html";
+        
     }
 }
 

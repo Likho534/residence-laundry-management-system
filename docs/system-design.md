@@ -339,3 +339,25 @@ If the password is wrong:
 If correct:
 
  Login successful.
+
+## PROFILES TABLE 
+
+The profiles table stores additional information about users that is not stored in Supabase Authentication.
+
+Each authenticated user has exactly one profile.
+
+Columns:
+
+- id
+- full_name
+- student_number
+- email
+- role
+- residence
+- room_number
+- fine_count
+- account_status
+- created_at
+
+
+
